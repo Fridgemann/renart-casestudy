@@ -3,11 +3,12 @@ require('dotenv').config();
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 8000;
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
 // Updated CORS for production
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-frontend-domain.com', 'https://your-frontend-domain.vercel.app']
+    ? FRONTEND_URL
     : ['http://localhost:3000'],
   credentials: true
 }));
