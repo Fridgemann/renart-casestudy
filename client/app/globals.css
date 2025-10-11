@@ -1,2 +1,39 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('/Fonts/avenir/Avenir-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('/Fonts/montserat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('/Fonts/montserat/Montserrat-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@layer utilities {
+  .font-avenir-book {
+    font-family: 'Avenir-Book', sans-serif;
+    font-weight: 400;
+  }
+
+  .font-montserrat-regular {
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 400;
+  }
+
+  .font-montserrat-medium {
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-weight: 500;
+  }
+}

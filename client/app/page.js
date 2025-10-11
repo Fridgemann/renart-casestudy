@@ -15,10 +15,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center md:p-6">
-      <h1 className="text-center text-[45px] font-light mb-8">Product List</h1>
+      <h1 className="text-center text-[45px] mb-12 font-avenir-book">
+        Product List
+      </h1>
       <div className="flex overflow-x-auto gap-6 px-6 pb-4 max-w-full">
         {products.map((product, index) => (
-          <ProductCard 
+          <ProductCard
             key={product.name} 
             product={product} 
             index={index} // Pass index for priority
