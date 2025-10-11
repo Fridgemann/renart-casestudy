@@ -37,3 +37,108 @@
     font-weight: 500;
   }
 }
+
+/* Carousel spacing adjustments */
+.product-carousel {
+  padding-bottom: 2rem; /* Space below slides */
+}
+
+/* Prevent card scaling/popping effects */
+.product-carousel .swiper-slide {
+  transform: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+}
+
+.product-carousel .swiper-slide-active,
+.product-carousel .swiper-slide-next,
+.product-carousel .swiper-slide-prev {
+  transform: none !important;
+  scale: 1 !important;
+}
+
+/* Ensure consistent slide heights */
+.product-carousel .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Navigation arrows positioning */
+.product-carousel .swiper-button-next,
+.product-carousel .swiper-button-prev {
+  margin-top: -1rem; /* Adjust vertical position */
+  color: #374151; /* Gray-700 */  
+  width: 44px;
+  height: 44px;
+  z-index: 10; /* Ensure arrows are above content */
+}
+
+.product-carousel .swiper-button-next:after,
+.product-carousel .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Add more space from edges */
+.product-carousel .swiper-button-next {
+  right: -20px; /* Move arrow further out */
+}
+
+.product-carousel .swiper-button-prev {
+  left: -20px; /* Move arrow further out */
+}
+
+/* Pagination dots spacing */
+.custom-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px !important; /* Space between dots */
+  background: #d1d5db; /* Gray-300 */
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #374151; /* Gray-700 */
+  transform: scale(1.2);
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .product-carousel .swiper-button-next,
+  .product-carousel .swiper-button-prev {
+    display: none; /* Hide arrows on mobile */
+  }
+  
+  .product-carousel {
+    padding-bottom: 1rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .product-carousel .swiper-button-next,
+  .product-carousel .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    margin-top: -18px;
+  }
+  
+  .product-carousel .swiper-button-next:after,
+  .product-carousel .swiper-button-prev:after {
+    font-size: 14px;
+  }
+  
+  .product-carousel .swiper-button-next {
+    right: 8px; /* Position inside container on mobile */
+  }
+  
+  .product-carousel .swiper-button-prev {
+    left: 8px; /* Position inside container on mobile */
+  }
+  
+  .product-carousel {
+    height: 500px; /* Smaller height on mobile */
+  }
+}
