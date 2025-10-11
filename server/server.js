@@ -10,6 +10,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.sendStatus(200);
 });
+const productRoutes = require('./routes/products');
+app.use('/api/products', productRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
